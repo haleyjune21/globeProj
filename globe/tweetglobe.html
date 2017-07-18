@@ -120,6 +120,8 @@
   <script type="text/javascript" src="./globe.js"></script>
   <script type="text/javascript">
 
+    THREE.ImageUtils.crossOrigin = "";
+
     if(!Detector.webgl){
       Detector.addGetWebGLMessage();
     } else {
@@ -129,7 +131,6 @@
           return new THREE.Color([0xff3333, 0x0000cc][label]);
         }
       });
-
 
       PUBNUB.init({
         subscribe_key: 'sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe'
@@ -162,18 +163,10 @@
         }
 
           }
-
-          
-
-          
       });
 
-      
-
       globe.animate();
-      
-
-      
+        
     }
 
   </script>
